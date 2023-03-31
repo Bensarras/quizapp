@@ -5,6 +5,8 @@ import { useState, useEffect, useContext } from "react";
 import { GameStateContext } from "./quizcontext/Contexts";
 import Menu from './components/Menu';
 import EndScreen from './components/EndScreen';
+import CreateQuiz from './pages/Createquizz';
+import TestcreayeQuizz from './pages/TestcreayeQuizz';
 function App() {
   const [gameState, setGameState] = useState("menu");
   const [userName, setUserName] = useState("");
@@ -26,6 +28,8 @@ function App() {
           setQuizlenght,
         }}
       >
+        {/* <TestcreayeQuizz></TestcreayeQuizz> */}
+        {/* <CreateQuiz /> */}
         {gameState === "menu" && <Menu />}
         {gameState === "playing" && <Test />}
         {gameState === "finished" && <EndScreen />}
